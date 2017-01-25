@@ -1,0 +1,47 @@
+/*
+Auteur:				Bram van den Broek
+Startdatum:			23-1-2017 + 8:51
+Bestandsnaam:		cijfer.css
+*/
+/*Tabel met cijfers*/
+#cijfer{
+	top: 250px;
+	transform: translateX(-50%);
+	left: 50%;
+	position: absolute;
+	width: 650px;
+	width: 650px;
+	border-collapse: collapse;
+}
+/*Table head*/
+thead th{
+	width: 300px;
+}
+tbody th{
+	text-align: left;
+}
+tbody td{
+	text-align: center;
+	word-spacing: 15px;
+	border: 1px solid #262626;
+}
+/*Bij smal scherm pagina decoratie weghalen en tabel links uitlijnen*/
+@media screen and (max-width: 1000px) {
+	#cover{
+		visibility: hidden;
+	}
+	#left{
+		visibility: hidden;
+	}
+}
+@media screen and (max-width: 700px) {
+	#cijfer {
+		transform: translateX(0);
+		left: 0px;
+	}
+}
+@media screen and (max-width: 630px) {
+		#cijfer{
+			top: 450px;
+		}	
+}

@@ -1,0 +1,136 @@
+/*
+Auteur:				Bram van den Broek
+Startdatum:			23-1-2017 + 14:12
+Bestandsnaam:		play.css
+	*/
+
+/*Player*/
+#content{
+	bottom: 50px;
+	z-index: 5;
+	min-height: 300px;
+	min-width: 700px;
+	background-color: #000;
+	background-size: cover;
+}
+/*Heads up display*/
+#hud{
+	background-image: url(../playContent/balk.jpg);
+	background-size: 60%;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	height: 80px;
+	visibility: hidden;
+}
+/*De players in de hud*/
+#hud figure{
+	display: inline-block;
+	margin: 10px 50px 0 10px;
+}
+/*De status van de players in de hud*/
+#hud figcaption{
+	position: relative;
+	top: 0px;
+	display: block;
+	color: #ff9418;
+	width: 90px;
+	text-shadow: 0 0 10px black;
+}
+/*figcaption:hover uitzetten inverband met default stylesheet*/
+#hud figcaption:hover{
+	text-decoration: none;
+	text-shadow: none;
+	cursor: default;
+}
+/*De status van de speler onderstrepen*/
+#p figcaption{
+	text-decoration: underline;
+}
+/*Stappen keuzes*/
+#choose{
+	display: inline-block;
+	float: right;
+}
+/*Marge van 2/3 stappen knoppen*/
+#twee, #drie{
+	margin-left: 10px; 
+}
+/*Stap keuze hover*/
+.dot:hover{
+	cursor: pointer;
+}
+/*Knop om regels te togglen*/
+#rule{
+	margin-top: 0;
+	float: right;
+}
+#rule:hover{
+	cursor: pointer;
+}
+/*Tekstbox met regels*/
+#ruletext{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #000;
+	border: 2px solid #ff9418;
+	padding: 0 30px;
+}
+/*Kruis van tekstbox met regels*/
+#kruis{
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 1px solid #ff9418;
+}
+#kruis:hover{
+	cursor: pointer;
+}
+/*"Alert" ingame*/
+#playtext{
+	margin: 0 auto;
+	font-size: 30px;
+	line-height: 50px;
+	vertical-align: middle;
+	text-align: center;
+	width: 50%;
+	background-color: #000;
+	color: #ff9418;
+	z-index: 50;
+}
+#content figure{
+	cursor: default;
+}
+#content figcaption:hover{
+	text-decoration: underline;
+}
+/*Spelers in de player*/
+.playicon{
+	width: 100px;
+	position: relative;
+	border: 3px solid #6d6d6d;
+	border-radius: 10%;
+	border-color: transparent;
+	left: 100px;
+}
+@media screen and (max-width: 1000px) {
+	#cover{
+		visibility: hidden;
+	}
+	#left{
+		visibility: hidden;
+	}
+	#content{
+		transform: translateX(-50%);
+		left: 50%;
+		min-width: 700px;
+	}
+}
+@media screen and (max-width: 700px) {
+	#content{
+		transform: translateX(0);
+		left: 0;
+	}
+}

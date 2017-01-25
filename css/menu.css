@@ -1,0 +1,106 @@
+/*
+Auteur:				Bram van den Broek
+Startdatum:			17-1-2017 + 9:23
+Bestandsnaam:		menu.css
+*/
+
+#menu{/*menu*/
+	position: fixed;
+	top: 75px;
+	left: 0;
+	width: 100%;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	height: 100px;
+	background-color: #262626;
+	z-index: 1;
+}
+#menu td:first-child a{ /*menu items*/
+	color: #ff006a; 
+}
+#menu td:nth-child(2)>a{
+	color: #51ff23;
+}
+#menu td:nth-child(2)+td a{
+	color: #00b7ff;
+}
+#menu td:nth-child(3)~td a{ 
+	color: #ffce00; 
+}
+#menu td{
+	width: 25%;
+	text-align: center;
+	background-color: #1b1b1b;
+}
+a{
+	padding: 20px;
+	text-decoration: none;
+}
+a:hover{
+	cursor: pointer;
+	text-shadow: 0px 0px 20px #fff ;
+}
+/*Extra menu items*/
+figure{
+	border-radius: 10px;
+	height: 48px;
+	width: 48px;
+}
+figure:hover{
+	cursor: pointer;
+}
+figcaption:hover{
+	text-shadow: 0px 0px 20px #fff ;
+	text-decoration: underline;
+}
+#play{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#play figcaption{
+	left: 64px;
+}
+#login{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+#login figcaption{
+	left: -94px;
+}
+figcaption{
+	position: relative;
+	top: -32px;
+}
+#games{
+	background-color: #161616;
+	font-size: 15px;
+	width: 130px;
+	position: absolute;
+	top: 180px;
+	border: 2px solid #bbbbbb;
+	border-radius: 15px;
+	padding-top: 5px;
+}
+#games a{
+	color: white;
+}
+/*SMAL SCHERM*/
+@media screen and (max-width: 630px) {
+	#menu{
+		top: 200px;
+		height: 200px;
+	}
+	#login{
+		position: absolute;
+		top: 124px;
+		left: 0px;
+	}
+	#login figcaption{
+		left: 64px;
+	}
+	#games{
+		top: 410px;
+	}
+}

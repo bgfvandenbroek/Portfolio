@@ -1,0 +1,160 @@
+/*
+Auteur:				Bram van den Broek
+Startdatum:			16-1-2017 + 10:28
+Bestandsnaam:		StyleSheet.css
+*/
+
+/*letter type*/
+@font-face{
+	font-family: custom;
+	src: url('../font/Hatoeski.otf');
+}
+*{
+	font-family: custom;
+	letter-spacing: 2px;
+	word-spacing: 2px;
+}
+/*body*/
+body{
+	background-color: #1b1b1b;
+	color: #a5a5a5;
+	font-size: 18px;
+}
+body:hover{
+	cursor: default;
+}
+/*header*/
+h1{
+	color: #d8d8d8;
+	text-align: center;
+}
+header{
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 1;
+	background-color: #1b1b1b;
+}
+hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(100, 100, 100, 0), rgba(100, 100, 100, 0.75), rgba(100,100, 100, 0));
+}
+/*content*/
+#content{
+	position: absolute;
+	top: 220px;
+	left: 150px;
+	right: 150px;
+}
+#cover{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 600px;
+	height: 300px;
+	background-image: url(../pic/cover.png);
+	background-size: 100%;
+	z-index: -1;
+	
+}
+#left{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 600px;
+	height: 300px;
+	background-image: url(../pic/left.png);
+	background-size: 100%;
+	z-index: -1;
+}
+.center {
+	text-align: center;
+}
+p::first-letter{
+	font-size: 20px;
+}
+p::first-line{
+	color: #d8d8d8;
+}
+#mail{
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: underline;
+}
+/*iframe*/
+iframe{
+	margin: 0 auto;
+}
+/*knoppen bij de quiz*/
+button{
+	font-size: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	width: 250px;
+	height: 50px;
+	border-radius: 10px;
+	background-color: #202020;
+	border: 2px solid #ff8300;
+	color: #ff8300;
+}
+button:hover{
+	cursor: pointer;
+	text-shadow: 0px 0px 20px #ff8300 ;
+	text-decoration: underline;
+}
+#goed{
+	color: #00ff21;
+}
+#fout{
+	color: #f80000;
+}
+#restart{
+	color: #ff8300;
+}
+#restart:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
+/*contact*/
+#contactform{
+	position: absolute;
+	transform: translateX(-50%);
+	left: 50%;
+}
+#contactform input[type=text], #contactform input[type=url], #contactform input[type=email]{
+	width: 200px;
+}
+/*SMAL SCHERM*/
+@media screen and (max-width: 630px) {
+	#cover{
+		visibility: hidden;
+	}
+	#left{
+		visibility: hidden;
+	}
+	#content{
+		left: 20px;
+		right: 20px;
+		top: 420px;
+		min-width: 150px;
+	}
+	header{
+		height: 400px;
+	}
+	h1{
+		position: relative;
+		top: 64px;
+	}
+}
+input[type=password]{
+	letter-spacing: -8px;
+}
+input{
+	font-size: 16px;
+}
+#formwrapper{
+	z-index: 500000000;
+	margin: 0 auto;
+	width: 300px;
+}
